@@ -30,6 +30,10 @@ module.exports = React.createClass({
         };
     },
 
+    componentDidMount: function() {
+        this.update();
+    },
+
     handleCurCateIconCount: function (count) {
         var curCate = document.getElementById(this.props.cate).getElementsByTagName('i')[1];
         var curCateCount = curCate.getAttribute('data-count') / 1;
@@ -49,6 +53,8 @@ module.exports = React.createClass({
 
     update: function () {
         Demo.chatingCate = Demo.selectedCate;
+
+        console.log(Demo.selectedCate)
 
         if (this.refs['i']) {
             var count = this.refs['i'].getAttribute('data-count') / 1;

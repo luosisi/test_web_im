@@ -43,10 +43,10 @@ module.exports = React.createClass({
                 <Avatar className='webim-profile-avatar small' title={Demo.user}/>
                 <div className='username'>{Demo.user}</div>
                 <Cate name='friend' update={this.updateFriend} cur={this.props.cur}/>
-                <Cate name='group' update={this.updateGroup} cur={this.props.cur}/>
+                {/*<Cate name='group' update={this.updateGroup} cur={this.props.cur}/>
                 <Cate name='chatroom' update={this.updateChatroom} cur={this.props.cur}/>
                 <Cate name='stranger' update={this.updateStranger} cur={this.props.cur}/>
-                <Operations username={Demo.user}/>
+                <Operations username={Demo.user}/>*/}
             </div>
         );
     }
