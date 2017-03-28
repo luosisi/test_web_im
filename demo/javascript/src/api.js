@@ -285,6 +285,7 @@ module.exports = {
         }
         ReactDOM.unmountComponentAtNode(this.node);
         this.render(this.node);
+
     },
 
     addToChatRecord: function (msg, type) {

@@ -65,6 +65,7 @@ module.exports = React.createClass({
         var username = this.refs.name.refs.input.value || (WebIM.config.autoSignIn ? WebIM.config.autoSignInName : '');
         var auth = this.refs.auth.refs.input.value || (WebIM.config.autoSignIn ? WebIM.config.autoSignInPwd : '');
         var type = this.refs.token.refs.input.checked;
+
         this.signin(username, auth, type);
     },
 
@@ -157,6 +158,7 @@ module.exports = React.createClass({
 
             if (username && auth) {
                 username = WebIM.utils.decrypt(username);
+                console.log("username==="+username)
                 this.signin(username, auth, type);
             } else {
                 window.history.pushState({}, 0, 'index.html');
@@ -165,6 +167,7 @@ module.exports = React.createClass({
     },
 
     componentDidMount: function () {
+        // this.signin('1','123456',false);
         if (WebIM.config.autoSignIn) {
             this.refs.button.refs.button.click();
         }
