@@ -4,7 +4,7 @@ var config = require('./webpack.dev');
 
 new WebpackDevServer(webpack(config), {
     publicPath: config.output.publicPath,
-    contentBase: ['./demo', './sdk'],
+    // contentBase: ['./demo', './sdk'],
     hot: true,
     inline: false,
     progress: true,
