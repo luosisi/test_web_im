@@ -25,23 +25,23 @@ module.exports = {
     },
     // devtool: '#eval-cheap-module-source-map',
     resolve: {
-        extensions: ['', '.js', '.jsx']
+        extensions: ['.js', '.jsx']
     },
     module: {
         loaders: [
             {
                 test: /\.(js|jsx)$/,
-                loader: 'babel',
+                loader: 'babel-loader',
                 exclude: /node_modules/,
             },
             {
                 test: /\.scss$/,
-                loader: 'style!css!sass'
+                loader: 'style-loader!css-loader!sass-loader'
             },
             {
                 test: /\.svg|woff|eot|ttf$/,
                 loader: require.resolve('file-loader') + '?name=[path][name].[ext]'
-            }
+            },
         ]
     },
     plugins: [

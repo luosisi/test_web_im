@@ -18,7 +18,8 @@ WebIM.config = {
     /*
      * Application AppKey
      */
-    appkey: 'easemob-demo#chatdemoui',
+    appkey: '1127170222115111#dev.jhjr',
+    // appkey: 'easemob-demo#chatdemoui',
     /*
      * Whether to use wss
      * @parameter {Boolean} true or false
