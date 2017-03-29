@@ -233,20 +233,20 @@ module.exports = React.createClass({
     },
 
     componentDidUpdate: function (prevProps, prevState) {
-        // for (var o in Demo.strangers) {
-        //     if (Demo.strangers.hasOwnProperty(o)) {
-        //         var msg = null;
-        //         while (msg = Demo.strangers[o].pop()) {
-        //             Demo.api.addToChatRecord(msg.msg, msg.type);
-        //             Demo.api.appendMsg(msg.msg, msg.type);
-        //         }
-        //     }
-        // }
-        // if(this.release){
-        //     Demo.api.releaseChatRecord();
-        // }else{
-        //     this.release = true;
-        // }
+        for (var o in Demo.strangers) {
+            if (Demo.strangers.hasOwnProperty(o)) {
+                var msg = null;
+                while (msg = Demo.strangers[o].pop()) {
+                    Demo.api.addToChatRecord(msg.msg, msg.type);
+                    Demo.api.appendMsg(msg.msg, msg.type);
+                }
+            }
+        }
+        if(this.release){
+            Demo.api.releaseChatRecord();
+        }else{
+            this.release = true;
+        }
     },
 
     componentDidMount: function () {
@@ -475,6 +475,7 @@ module.exports = React.createClass({
 
     getStrangers: function () {
         var strangers = [];
+
 
         for (var o in Demo.strangers) {
             if (Demo.strangers.hasOwnProperty(o)) {
