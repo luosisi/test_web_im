@@ -39,7 +39,7 @@ module.exports = React.createClass({
 
     render: function () {
         return (
-            <div className='webim-leftbar hide'>
+            <div className='webim-leftbar'>
                 <Avatar className='webim-profile-avatar small' title={Demo.user}/>
                 <div className='username'>{Demo.user}</div>
                 <Cate name='friend' update={this.updateFriend} cur={this.props.cur}/>
